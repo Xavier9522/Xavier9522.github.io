@@ -1,47 +1,46 @@
 ---
-layout: default
+layout: page
 ---
 
-<link rel="stylesheet" href="/js/prettify/prettify.css" />
-<style type="text/css">
-    body { background:#e8e8e8; }
-    @media screen and (max-width: 750px){
-        body { background:#fff; }
-    }
-    @media screen and (max-width: 1020px){
-        body { background:#fff; }
-    }
-</style>
+<div class="post">
 
-<div id="content">
-    <div class="entry">
-        <h1 class="entry-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
-        <p class="entry-date">{{ page.date|date:"%Y-%m-%d" }}</p>
-        {{ content }}
+  <div class="card">
+
+    {% if page.title %}
+    <h1 class="card__title article_title">{{ page.title | capitalize }}</h1>
+    {% endif %}
+
+    {% if page.date %}
+    <div class="card__date">{{ page.date | date: "%Y / %m / %d" }}</div>
+    {% endif %}
+
+    <div class="article__content">{{ content }}</div>
+
+  </div>
+
+
+  <div class="post__comment">
+    {% if site.disqus and page.comment %}
+    <div class="post__comment--on">
+      {% assign url = page.url | absolute_url %}
+      {% include disqus.html username = site.disqus url = url id = page.id %}
     </div>
+    {% else %}
+    <div class="post__comment--off">Comment is not allowed.</div>
+    {% endif %}
+  </div>
 
-    <div class="sidenav">
-        <h2>Blog</h2>
-        <ul class="artical-list">
-        {% for post in site.categories.blog%}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
 
-        <h2>Dump</h2>
-        <ul class="artical-list">
-        {% for post in site.categories.dump%}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
+  <div class="post__pagination">
+    <ul>
+      {% if page.next %}
+      <li>{% include card.html post=page.next volume='less' %}</li>
+      {% endif %}
 
-        <h2>Project</h2>
-        <ul class="artical-list">
-        {% for post in site.categories.project%}
-            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-        </ul>
-    </div>
+      {% if page.previous %}
+      <li>{% include card.html post=page.previous volume='less' %}</li>
+      {% endif %}
+    </ul>
+  </div>
+
 </div>
-
-<script src="/js/post.js" type="text/javascript"></script>
