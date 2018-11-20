@@ -40,7 +40,7 @@ social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
 theme-color: 'default'  # pink or default
 
 # Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
-postPatterns: 'circuitBoard'
+postPatterns: 'food'
 
 
 
