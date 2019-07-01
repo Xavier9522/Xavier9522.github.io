@@ -1,5 +1,5 @@
 # Site settings 配置站点
-title: 'Xavier的独立博客'
+title: 'Xavier的小屋'
 description: '昵称Xav1er，长得贼帅，web小白/伪极客/灵魂摄影师，热爱技术&设计。很高兴能在这里与你分享我对技术和生活的思考。'
 keyword: 'Xavier, Xavier的独立博客, Xavier的博客'
 
@@ -37,7 +37,7 @@ social-share: true
 social-share-items: ['wechat', 'weibo', 'douban', 'twitter']
 
 # theme color 主题皮肤
-theme-color: 'default'  # pink or default
+theme-color: 'pink'  # pink or default
 
 # Post header background patterns (when the post no cover): circuitBoard, overlappingCircles, food, glamorous, ticTacToe, seaOfClouds
 postPatterns: 'food'
