@@ -23,3 +23,5 @@ Throughout this guide there are a number of small-but-handy pieces of informatio
 ### Video Test
 
 <iframe type="text/html" width="100%" height="385" src="http://www.youtube.com/embed/gfmjMWjn-Xg" frameborder="0"></iframe>
+
+![Jekyll](http://i1.fuimg.com/692864/a69c95a628fc8e04.png)
