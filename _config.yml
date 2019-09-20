@@ -11,7 +11,7 @@ keyword: 'Xavier, Xavier的独立博客, Xavier的博客'
 nav:
   home: '/'
   tags: '/tags.html'
-  
+  友情链接: '/2017/04/17/友情链接.html'
 # Footer
 footer:
   since: 2018
